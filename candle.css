@@ -53,40 +53,90 @@ body{
     width: 0.7rem;
     height: 2rem;
     z-index: -1;
-    background: linear-gradient(yellow, goldenrod,rgb(233, 153, 4),gold);
+    background: linear-gradient(yellow 0%, goldenrod 25%,rgb(233, 153, 4) 50%,gold 75%,rgb(78, 152, 221)100%);
     border: 2px solid goldenrod;
     position: absolute;
     top: -22.5%;
     left: 37%;
     border-radius: 60% 60% 50% 50%;
-    display: none;
-
+    box-shadow: -0.5px -5px 20px goldenrod;
+   animation: move 2s linear infinite alternate-reverse ;
 
    
 }
-.switch{
-   
+@keyframes move {
+    0% {
+        transform: translate(1px);
+    }
+    100% {
+        transform: translate(-1px)
+    }
+    
+}
+.stick{
     width: 4rem;
     height: 1px;
     z-index: -1;
     background-color: white;
     border: 2px solid whitesmoke;
     position: absolute;
-    left: 2rem;
-    top: -3rem;
-    transform: rotate(-30deg);
+    left: -8rem;
+    top: 8rem;
+    transform: rotate(90deg);
+  
 }
-.switch::before{
+.stick::before{
     content: '';
     background-color: rgb(187, 77, 13);
     position: absolute;
     width: 0.5rem;
     height: 0.5rem;
-    left: -0.6rem;
-    top: -0.2rem;
+    left: -0.4rem;
+    top: -0.23rem;
     border-radius: 40%;
 }
-.switch:hover + .lit {
-    display: block;
-    
+.stick2{
+    width: 4rem;
+    height: 1px;
+    z-index: -1;
+    background-color: white;
+    border: 2px solid whitesmoke;
+    position: absolute;
+    left: -9rem;
+    top: 8rem;
+    transform: rotate(90deg);
+  
 }
+.stick2::before{
+    content: '';
+    background-color: rgb(187, 77, 13);
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    left: -0.4rem;
+    top: -0.23rem;
+    border-radius: 40%;
+}
+.stick3{
+    width: 4rem;
+    height: 1px;
+    z-index: -1;
+    background-color: white;
+    border: 2px solid whitesmoke;
+    position: absolute;
+    left: -10rem;
+    top: 8rem;
+    transform: rotate(90deg);
+  
+}
+.stick3::before{
+    content: '';
+    background-color: rgb(187, 77, 13);
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    left: -0.4rem;
+    top: -0.23rem;
+    border-radius: 40%;
+}
+
